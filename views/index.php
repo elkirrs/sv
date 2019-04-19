@@ -2,7 +2,7 @@
 require "index/header.php";
 ?>
 
-<div class="container-fluid">
+<div class="container-fluid py-1">
     <div class="row">
         <div class="col m-0 p-0">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -59,28 +59,29 @@ require "index/header.php";
 
 <div class="container">
     <div class="row p-4 px-3">
-        <div class="col-sm shadow-lg py-3 mx-2">
+        <div class="col shadow-lg py-3 mx-2 my-2">
             <h2 class="text-md-center">Полезная информация </h2>
             <p class="text-md-center">Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация </p>
 
         </div>
-        <div class="col-sm shadow-lg py-3 mx-2">
+        <div class="col shadow-lg py-3 mx-2 my-2">
             <h2 class="text-md-center">Полезная информация </h2>
             <p class="text-md-center">Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация </p>
 
         </div>
-        <div class="col-sm py-3 shadow-lg mx-2">
+        <div class="col py-3 shadow-lg mx-2 my-2">
             <h2 class="text-md-center">Полезная информация </h2>
             <p class="text-md-center">Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация </p>
         </div>
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm bg-light justify-content-center">
-            <h1 class="text-md-center">Заголовок</h1>
-            <p>Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация Полезная информация </p>
+<div class="container-fluid col">
+    <div class="row shadow-lg">
+        <img src="/sv/views/assets/img/fon1.jpg" class="d-sm-block" alt="">
+        <div class="carousel-caption d-none d-sm-block">
+            <h1>Заголовок</h1>
+            <p>Полезная иноформайия или графики. Полезная иноформайия или графики. Полезная иноформайия или графики.</p>
         </div>
     </div>
 </div>
