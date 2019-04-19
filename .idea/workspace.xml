@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02145145-32a5-41d8-8e40-405440bf0c11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/reviews.php" afterDir="false" />
-    </list>
+    <list default="true" id="02145145-32a5-41d8-8e40-405440bf0c11" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/views/reviews.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="633">
-              <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+              <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -152,12 +144,12 @@
       <workItem from="1554379542990" duration="20986000" />
       <workItem from="1554447993475" duration="3152000" />
       <workItem from="1554470466302" duration="13000" />
-      <workItem from="1555671914320" duration="13315000" />
+      <workItem from="1555671914320" duration="13428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37709000" />
+    <option name="totallyTimeSpent" value="37822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -291,7 +283,7 @@
     <entry file="file://$PROJECT_DIR$/views/reviews.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="633">
-          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+          <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
         </state>
       </provider>
     </entry>

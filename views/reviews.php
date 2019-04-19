@@ -3,9 +3,9 @@ require "index/header.php";
 ?>
 
 <main role="main" class="container my-4">
-    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-lg">
+    <div class="align-items-center p-3 my-3 bg-purple rounded shadow-lg">
         <div class="lh-100">
-            <h3 class="mb-0 text-dark lh-100 text-center font-weight-light">Отзывы наших клиентов</h3>
+            <h3 class="mb-0 text-center font-weight-light">Отзывы наших клиентов</h3>
         </div>
     </div>
 
