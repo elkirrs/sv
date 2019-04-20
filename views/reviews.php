@@ -9,7 +9,7 @@ require "index/header.php";
         </div>
     </div>
 
-    <div class="my-3 p-3 bg-white rounded shadow-lg">
+    <div class="my-4 p-3 bg-white rounded shadow-lg">
 
         <a type="button" class="btn btn-warning btn-sm" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
             Все отзывы <span class="badge badge-info">123</span>
