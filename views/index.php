@@ -2,9 +2,9 @@
 require "index/header.php";
 ?>
 
-<div class="container-fluid py-1">
-    <div class="row">
-        <div class="col m-0 p-0">
+<div class="container-fluid">
+    <div class="row shadow-lg">
+        <div class="col m-0 p-0 shadow-lg">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class=""></li>
