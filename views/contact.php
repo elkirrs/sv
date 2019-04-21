@@ -17,7 +17,7 @@ require "index/header.php";
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+792344567" required>
                 <label for="exampleFormControlTextarea1">Ваше сообщение:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" required></textarea>
-                <button type="button" class="btn btn-success btn-lg my-3 rounded-pill">Оставить заявку</button>
+                <button type="submit" class="btn btn-success btn-lg my-3 rounded-pill">Оставить заявку</button>
             </form>
         </div>
     </div>

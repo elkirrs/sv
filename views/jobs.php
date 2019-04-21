@@ -81,12 +81,12 @@ require "index/header.php";
                     </div>
 
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
+                        <input type="file" class="custom-file-input" id="customFile" required>
                         <label class="custom-file-label" for="customFile">Загрузить резюме</label>
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Отпавить</button>
+                <button type="submit" class="btn btn-primary">Отпавить</button>
             </div>
             </form>
         </div>
