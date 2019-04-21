@@ -80,11 +80,13 @@ require "index/header.php";
             <div class="card card-body shadow-lg">
                 <form>
                     <div class="form-group my-2">
-                        <label for="exampleInputEmail1">Название компании</label>
-                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите название компании" required>
-                        <label for="exampleInputEmail1">Введите отзыв</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" required></textarea>
-                        <button type="button" class="btn btn-primary my-3 rounded-pill">Оставить отзыв</button>
+                        <form action="#" method="post">
+                            <label for="exampleInputEmail1">Название компании</label>
+                            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите название компании" required>
+                            <label for="exampleInputEmail1">Введите отзыв</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" required></textarea>
+                            <button type="button" class="btn btn-primary my-3 rounded-pill">Оставить отзыв</button>
+                        </form>
                     </div>
                 </form>
             </div>

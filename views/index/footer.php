@@ -7,39 +7,34 @@
         <div class="col-6 col-md">
             <h5>Features</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Cool stuff</a></li>
-                <li><a class="text-muted" href="#">Random feature</a></li>
-                <li><a class="text-muted" href="#">Team feature</a></li>
-                <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                <li><a class="text-muted" href="#">Another one</a></li>
-                <li><a class="text-muted" href="#">Last time</a></li>
+                <li><a class="text-muted" href="#">Лицензии и сертификаты</a></li>
+                <li><a class="text-muted" href="#">Политика конфеденциальности</a></li>
+                <li><a class="text-muted" href="#">Благотворительность</a></li>
+                <li><a class="text-muted" href="#">Сотрудничество</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Resource</a></li>
-                <li><a class="text-muted" href="#">Resource name</a></li>
-                <li><a class="text-muted" href="#">Another resource</a></li>
-                <li><a class="text-muted" href="#">Final resource</a></li>
+                <li><a class="text-muted" href="#">Почему именно мы?</a></li>
+                <li><a class="text-muted" href="/sv/views/jobs.php">Вакансии</a></li>
+                <li><a class="text-muted" href="/sv/views/faq.php">FAQ</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Business</a></li>
-                <li><a class="text-muted" href="#">Education</a></li>
-                <li><a class="text-muted" href="#">Government</a></li>
-                <li><a class="text-muted" href="#">Gaming</a></li>
+                <li><a class="text-muted" href="#">Оформить заявку</a></li>
+                <li><a class="text-muted" href="#">Задать вопрос</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
             <h5>About</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Team</a></li>
-                <li><a class="text-muted" href="#">Locations</a></li>
-                <li><a class="text-muted" href="#">Privacy</a></li>
-                <li><a class="text-muted" href="#">Terms</a></li>
+                <li><a class="text-muted" href="#">О нас</a></li>
+                <li><a class="text-muted" href="#">Контакты</a></li>
+                <li><a class="text-muted" href="/sv/views/contact.php">Обратная связь</a></li>
+                <li><a class="text-muted" href="/sv/views/reviews.php">Отзывы заказчиков</a></li>
             </ul>
         </div>
     </div>
