@@ -12,65 +12,50 @@
 
     <div class="my-4 p-3 bg-white rounded shadow-lg">
 
+
         <a type="button" class="btn btn-warning btn-sm" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-            Все отзывы <span class="badge badge-info"><?= $query->count() ;?></span>
+            Все отзывы <span class="badge badge-info"><?= $query->count();?></span>
         </a>
         <h6 class="border-bottom border-gray pb-2 mb-0"></h6>
-        <div class="media text-muted pt-3">
-            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#007bff" width="100%" height="100%"></rect><text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text></svg>
-            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark">@Название компании</strong>
-                Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании.
-            </p>
-        </div>
-        <div class="media text-muted pt-3">
-            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"></rect><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
-            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark">@Название компании</strong>
-                Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании.
-            </p>
-        </div>
-        <div class="media text-muted pt-3">
-            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#6f42c1" width="100%" height="100%"></rect><text fill="#6f42c1" dy=".3em" x="50%" y="50%">32x32</text></svg>
-            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark">@Название компании</strong>
-                Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании.
-            </p>
-        </div>
+
+        <?php
+        foreach ($query->selectComment() as $review) {
+            ?>
+            <div class="media text-muted pt-3">
+                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                    <title>Placeholder</title>
+                    <rect fill="#007bff" width="100%" height="100%"></rect>
+                    <text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text>
+                </svg>
+                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                    <strong class="d-block text-gray-dark">@ <?php echo $review['name']; ?></strong>
+                    <?php echo $review['comment']; ?>
+                </p>
+            </div>
+            <?php }?>
         <div class="row">
             <div class="col">
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
-                    <div class="media text-muted pt-3">
-                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#6f42c1" width="100%" height="100%"></rect><text fill="#6f42c1" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                            <strong class="d-block text-gray-dark">@Название компании</strong>
-                            Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании.
-                        </p>
-                    </div>
-                    <div class="media text-muted pt-3">
-                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#007bff" width="100%" height="100%"></rect><text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                            <strong class="d-block text-gray-dark">@Название компании</strong>
-                            Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании.
-                        </p>
-                    </div>
-                    <div class="media text-muted pt-3">
-                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"></rect><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                            <strong class="d-block text-gray-dark">@Название компании</strong>
-                            Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании.
-                        </p>
-                    </div>
-                    <div class="media text-muted pt-3">
-                        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#6f42c1" width="100%" height="100%"></rect><text fill="#6f42c1" dy=".3em" x="50%" y="50%">32x32</text></svg>
-                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                            <strong class="d-block text-gray-dark">@Название компании</strong>
-                            Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании Отзыв от компании.
-                        </p>
-                    </div>
-                </div>
+                    <?php
+                    foreach ($query->selectReview() as $review) {
+                        ?>
+                        <div class="media text-muted pt-3">
+                            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32">
+                                <title>Placeholder</title>
+                                <rect fill="#007bff" width="100%" height="100%"></rect>
+                                <text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text>
+                            </svg>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                <strong class="d-block text-gray-dark">@ <?php echo $review['name']; ?></strong>
+                                <?php echo $review['comment']; ?>
+                            </p>
+                        </div>
+                    <?php }?>
             </div>
         </div
+    </div>
     </div>
         <small class="d-block text-right mt-2">
                 <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">

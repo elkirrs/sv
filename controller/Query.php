@@ -51,12 +51,33 @@ class Query
         return $this->allReview();
     }
 
-    public function select()
+
+
+    public function selectAllComment()
     {
-        $select = "SELECT `name`, `comment` FROM `reviews` ORDER BY id DESC";
-        return $select;
+        $select = "SELECT `name`, `comment` FROM `reviews` ORDER BY id DESC LIMIT 4";
+        $selectQuery = $this->dbQuery($select);
+        return $selectQuery;
     }
 
+
+    public function selectComment()
+    {
+        return $this->selectAllComment();
+    }
+
+    public function selectAllReview()
+    {
+
+        $select = 'SELECT `name`, `comment` FROM `reviews` ORDER BY id DESC LIMIT 4,10000';
+        $selectQuery = $this->dbQuery($select);
+        return $selectQuery;
+    }
+
+    public function selectReview()
+    {
+        return $this->selectAllReview();
+    }
 
     private function dbQuery($sql)
     {
