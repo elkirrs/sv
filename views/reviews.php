@@ -1,5 +1,6 @@
 <?php
-require "index/header.php";
+ require 'index/header.php';
+ require_once '/sv/controller/Query.php';
 ?>
 
 <main role="main" class="container my-4">
@@ -12,7 +13,7 @@ require "index/header.php";
     <div class="my-4 p-3 bg-white rounded shadow-lg">
 
         <a type="button" class="btn btn-warning btn-sm" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-            Все отзывы <span class="badge badge-info">123</span>
+            Все отзывы <span class="badge badge-info">78</span>
         </a>
         <h6 class="border-bottom border-gray pb-2 mb-0"></h6>
         <div class="media text-muted pt-3">
@@ -78,21 +79,19 @@ require "index/header.php";
         </small>
         <div class="collapse my-3" id="collapseExample">
             <div class="card card-body shadow-lg">
-                <form>
-                    <div class="form-group my-2">
-                        <form action="#" method="post">
-                            <label for="exampleInputEmail1">Название компании</label>
-                            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите название компании" required>
-                            <label for="exampleInputEmail1">Введите отзыв</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" required></textarea>
-                            <button type="submit" class="btn btn-primary my-3 rounded-pill">Оставить отзыв</button>
-                        </form>
-                    </div>
-                </form>
+                <div class="form-group my-2">
+                    <form action="/sv/controller/Form.php" method="POST">
+                        <label for="exampleInputEmail1">Название компании</label>
+                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите название компании" name="nameCompany" required>
+                        <label for="exampleInputEmail1">Введите отзыв</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" name="comment" required></textarea>
+                        <button type="submit" class="btn btn-primary my-3 rounded-pill">Оставить отзыв</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </main>
 <?php
-require 'index/footer.php';
+ require 'index/footer.php';
 ?>
