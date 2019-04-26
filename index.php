@@ -6,5 +6,4 @@
  * Time: 15:06
  */
 
-
 require 'views/index.php';

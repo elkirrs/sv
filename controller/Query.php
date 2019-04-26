@@ -28,10 +28,27 @@ class Query
         return $queryInsert;
     }
 
-    public function count()
+    public function countAll()
     {
         $count = "SELECT count(*) FROM `reviews`";
-        return $count;
+        $countQuery = $this->dbQuery($count);
+        return $countQuery;
+    }
+
+    public function allReview()
+    {
+        foreach ($this->countAll() as $count)
+        {
+            foreach ($count as $all)
+            {
+                echo $all;
+            }
+        }
+    }
+
+    public function count()
+    {
+        return $this->allReview();
     }
 
     public function select()
@@ -58,6 +75,7 @@ class Query
         $connect = require_once "Database.php";
         return $connect;
     }
+
 
 }
 

@@ -1,7 +1,7 @@
 <?php
  require 'index/header.php';
- require_once '/sv/controller/Query.php';
-?>
+ require_once '../controller/Query.php';
+ ?>
 
 <main role="main" class="container my-4">
     <div class="align-items-center p-3 my-3 bg-purple rounded shadow-lg">
@@ -13,7 +13,7 @@
     <div class="my-4 p-3 bg-white rounded shadow-lg">
 
         <a type="button" class="btn btn-warning btn-sm" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-            Все отзывы <span class="badge badge-info">78</span>
+            Все отзывы <span class="badge badge-info"><?= $query->count() ;?></span>
         </a>
         <h6 class="border-bottom border-gray pb-2 mb-0"></h6>
         <div class="media text-muted pt-3">
