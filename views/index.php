@@ -18,7 +18,7 @@ require "index/header.php";
                             <div class="carousel-caption text-left">
                                 <h1>Example headline.</h1>
                                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                                <p><button class="btn btn-lg btn-primary" href="#" role="button" type="button" data-toggle="modal" data-target=".bt-example-modal-lg">Sign up today</button></p>
                             </div>
                         </div>
                     </div>
@@ -56,6 +56,9 @@ require "index/header.php";
         </div>
     </div>
 </div>
+
+
+
 
 <div class="container">
     <div class="row p-4 px-3">

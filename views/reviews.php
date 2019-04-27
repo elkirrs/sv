@@ -69,7 +69,7 @@
                         <label for="exampleInputEmail1">Название компании</label>
                         <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите название компании" name="nameCompany" required>
                         <label for="exampleInputEmail1">Введите отзыв</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" name="comment" required></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" name="comment" max="1500" required></textarea>
                         <button type="submit" class="btn btn-primary my-3 rounded-pill">Оставить отзыв</button>
                     </form>
                 </div>

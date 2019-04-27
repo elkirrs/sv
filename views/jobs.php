@@ -6,45 +6,40 @@
  * Time: 02:34
  */
 require "index/header.php";
+require_once '../controller/Query.php';
 ?>
 
+
 <div class="container my-4">
-    <div class="row mb-2">
-        <div class="col-md-6">
-            <div class="card flex-md-row mb-4 shadow-lg">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block text-dark"><h4>
-                            Вакансия
-                        </h4></strong>
-                    <p class="card-text mb-3">Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии</p>
-                    <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#exampleModal">Откликнуться</button>
-                </div>
-            </div>
+    <div class="align-items-center p-3 my-3 bg-purple rounded shadow-lg">
+        <div class="lh-100">
+            <h3 class="mb-0 text-center font-weight-light">Вакансии</h3>
         </div>
+    </div>
+</div>
 
-        <div class="col-md-6">
-            <div class="card flex-md-row mb-4 shadow-lg">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block text-dark"><h4>
-                            Вакансия
-                        </h4></strong>
-                    <p class="card-text mb-3">Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии</p>
-                    <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#exampleModal">Откликнуться</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-md-6">
+<div class="container my-4">
+    <div class="row mb-2 justify-content-md-center">
+
+        <?php
+        foreach ($query->selectJobs() as $job)
+        { ?>
+
+        <div class="col-md-9 ">
             <div class="card flex-md-row mb-4 shadow-lg">
                 <div class="card-body d-flex flex-column align-items-start">
                     <strong class="d-inline-block text-dark"><h4>
-                            Вакансия
+                            <?php echo $job['Name']; ?>
                         </h4></strong>
-                    <p class="card-text mb-3">Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии Описани вакансии</p>
+                    <p class="card-text mb-3 text-break">
+                        <?php echo $job['Description']; ?>
+                    </p>
                     <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#exampleModal">Откликнуться</button>
                 </div>
             </div>
         </div>
+        <?php } ?>
     </div>
 </div>
 

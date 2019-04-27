@@ -52,7 +52,6 @@ class Query
     }
 
 
-
     public function selectAllComment()
     {
         $select = "SELECT `name`, `comment` FROM `reviews` ORDER BY id DESC LIMIT 4";
@@ -68,8 +67,7 @@ class Query
 
     public function selectAllReview()
     {
-
-        $select = 'SELECT `name`, `comment` FROM `reviews` ORDER BY id DESC LIMIT 4,10000';
+        $select = "SELECT `name`, `comment` FROM `reviews` ORDER BY id DESC LIMIT 4,100000";
         $selectQuery = $this->dbQuery($select);
         return $selectQuery;
     }
@@ -97,6 +95,13 @@ class Query
         return $connect;
     }
 
+    public function selectJobs()
+    {
+        $select = "SELECT `Name`, `Description` FROM `jobs` ORDER BY id DESC";
+        $selectQueryJobs = $this->dbQuery($select);
+        return $selectQueryJobs;
+
+    }
 
 }
 

@@ -2,10 +2,17 @@
 require "index/header.php";
 ?>
 
+<div class="container my-4">
+    <div class="align-items-center p-3 my-3 bg-purple rounded shadow-lg">
+        <div class="lh-100">
+            <h3 class="mb-0 text-center font-weight-light">Оставте заявку</h3>
+        </div>
+    </div>
+</div>
+
 <div class="container">
-    <div class="row px-3 py-5">
+    <div class="row px-2">
         <div class="col-sm p-4 px-3 shadow-lg py-3 mx-2">
-            <h3 class="text-center font-weight-light">Обратная связь</h3>
             <form action="#" method="post">
                 <label for="exampleFormControlInput1">Ваше имя:</label>
                 <input class="form-control" type="text" placeholder="ФИО" required>
