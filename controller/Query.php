@@ -22,7 +22,7 @@ class Query
         $this->name = $name;
         $this->comment = $comment;
 
-        $insert = "INSERT INTO `reviews`(`name`,`comment`) VALUES ('$this->name','$this->comment')";
+        $insert = "INSERT INTO `reviews` (`name`,`comment`) VALUES ('$this->name','$this->comment')";
         $queryInsert = $this->dbQuery($insert);
 
         return $queryInsert;

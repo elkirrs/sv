@@ -6,10 +6,12 @@
  * Time: 02:34
  */
 
+require_once '../controller/Query.php';
+
+
 $name = htmlspecialchars(trim($_POST['nameCompany']));
 $comment = htmlspecialchars(trim($_POST['comment']));
 
-require_once 'Query.php';
 
 $query->insert("$name", "$comment");
 

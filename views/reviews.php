@@ -1,5 +1,5 @@
 <?php
- require 'index/header.php';
+ require_once 'index/header.php';
  require_once '../controller/Query.php';
  ?>
 
@@ -29,8 +29,8 @@
                     <text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text>
                 </svg>
                 <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                    <strong class="d-block text-gray-dark">@ <?php echo $review['name']; ?></strong>
-                    <?php echo $review['comment']; ?>
+                    <strong class="d-block text-gray-dark">@ <?= $review['name']; ?></strong>
+                    <?= $review['comment']; ?>
                 </p>
             </div>
             <?php }?>
@@ -48,8 +48,8 @@
                                 <text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text>
                             </svg>
                             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                <strong class="d-block text-gray-dark">@ <?php echo $review['name']; ?></strong>
-                                <?php echo $review['comment']; ?>
+                                <strong class="d-block text-gray-dark">@ <?= $review['name']; ?></strong>
+                                <?= $review['comment']; ?>
                             </p>
                         </div>
                     <?php }?>
@@ -59,17 +59,18 @@
     </div>
         <small class="d-block text-right mt-2">
                 <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    <span class="badge badge-success">Оставить отзыв</span>
+                    <h5><span class="badge badge-success">Оставить отзыв</span></h5>
                 </a>
         </small>
         <div class="collapse my-3" id="collapseExample">
             <div class="card card-body shadow-lg">
                 <div class="form-group my-2">
-                    <form action="/sv/controller/Form.php" method="POST">
-                        <label for="exampleInputEmail1">Название компании</label>
-                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите название компании" name="nameCompany" required>
-                        <label for="exampleInputEmail1">Введите отзыв</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" name="comment" max="1500" required></textarea>
+                    <form action="../model/forms.php" method="POST">
+
+                        <label">Название компании</label>
+                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите название компании" name="nameCompany" minlength="3" maxlength="50" required>
+                        <label >Введите отзыв</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" name="comment" minlength="10" maxlength="3000" required></textarea>
                         <button type="submit" class="btn btn-primary my-3 rounded-pill">Оставить отзыв</button>
                     </form>
                 </div>

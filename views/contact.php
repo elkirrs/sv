@@ -1,12 +1,7 @@
 <?php
 require_once "index/header.php";
 ?>
-<div class="alert alert-warning alert-dismissible fade " role="button" id="collapseExample">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
+
 
 <div class="container my-4">
     <div class="align-items-center p-3 my-3 bg-purple rounded shadow-lg">
@@ -19,7 +14,8 @@ require_once "index/header.php";
 <div class="container">
     <div class="row px-2">
         <div class="col-sm p-4 px-3 shadow-lg py-3 mx-2">
-            <form action="../model/mail.php" method="POST">
+            <form action="" method="POST">
+                <?php require_once '../model/mail.php'; ?>
                 <label for="exampleFormControlInput1">Ваше имя:</label>
                 <input class="form-control" type="text" placeholder="ФИО"  name="userName" required>
                 <label for="exampleFormControlInput1">Название компании:</label>
