@@ -17,29 +17,32 @@ require_once '../controller/Query.php';
         </div>
     </div>
 </div>
-
-
 <div class="container my-4">
     <div class="row mb-2 justify-content-md-center">
-
-        <?php
-        foreach ($query->selectJobs() as $job)
-        { ?>
-
-        <div class="col-md-9 ">
-            <div class="card flex-md-row mb-4 shadow-lg">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block text-dark"><h4>
-                            <?php echo $job['Name']; ?>
-                        </h4></strong>
-                    <p class="card-text mb-3 text-break">
-                        <?php echo $job['Description']; ?>
-                    </p>
-                    <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#exampleModal">Откликнуться</button>
-                </div>
+        <div class="container-fluid my-3">
+            <div class="card-deck text-center col-12">
+                <?php
+                foreach ($query->jobs() as $job) :
+                    ?>
+                    <div class="col-4">
+                        <div class="border shadow-sm">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal"><?= $job['name']; ?></h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><?= $job['description']; ?></li>
+                                </ul>
+                                <div class="text-right">
+                                    <button class="btn btn-outline-success float-left" type="button" data-toggle="modal" data-target="#exampleModal">Откликнуться</button>
+                                    <small class="text-muted"><?= $job['date']; ?></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-        <?php } ?>
     </div>
 </div>
 

@@ -12,11 +12,15 @@ class Query
     private $name;
     private $comment;
     private $delete;
+    private $nameJobs;
+    private $description;
+
 
     public function __construct()
     {
         $this->requireDatabase();
     }
+
 
     public function insert($name, $comment)
     {
@@ -29,16 +33,30 @@ class Query
         return $queryInsert;
     }
 
-    public function countAll()
+
+    public function insertJobs($nameJobs, $description)
+    {
+        $this->nameJobs = $nameJobs;
+        $this->description = $description;
+
+        $insert = "INSERT INTO `jobs` (`name`,`description`) VALUES ('$this->nameJobs','$this->description')";
+        $queryInsert = $this->dbQuery($insert);
+
+        return $queryInsert;
+    }
+
+
+    public function countAllComments()
     {
         $count = "SELECT count(*) FROM `reviews`";
         $countQuery = $this->dbQuery($count);
         return $countQuery;
     }
 
+
     public function allReview()
     {
-        foreach ($this->countAll() as $count)
+        foreach ($this->countAllComments() as $count)
         {
             foreach ($count as $all)
             {
@@ -47,9 +65,36 @@ class Query
         }
     }
 
-    public function count()
+
+    public function countComments()
     {
         return $this->allReview();
+    }
+
+
+    public function countAllJobs()
+    {
+        $count = "SELECT count(*) FROM `jobs`";
+        $countQuery = $this->dbQuery($count);
+        return $countQuery;
+    }
+
+
+    public function allJobs()
+    {
+        foreach ($this->countAllJobs() as $jobs)
+        {
+            foreach ($jobs as $job)
+            {
+                echo $job;
+            }
+        }
+    }
+
+
+    public function countJobs()
+    {
+        return $this->allJobs();
     }
 
 
@@ -59,6 +104,7 @@ class Query
         $selectQuery = $this->dbQuery($select);
         return $selectQuery;
     }
+
 
     public function selectAllComments()
     {
@@ -73,6 +119,7 @@ class Query
         return $this->selectAllComment();
     }
 
+
     public function selectAllReview()
     {
         $select = "SELECT `name`, `comment` FROM `reviews` ORDER BY id DESC LIMIT 4,100000";
@@ -80,10 +127,12 @@ class Query
         return $selectQuery;
     }
 
+
     public function selectReview()
     {
         return $this->selectAllReview();
     }
+
 
     private function dbQuery($sql)
     {
@@ -91,11 +140,13 @@ class Query
         return $db->query($sql);
     }
 
+
     private function dbExecute($sql)
     {
         $db = new Database();
         return $db->execute($sql);
     }
+
 
     private function requireDatabase()
     {
@@ -103,25 +154,48 @@ class Query
         return $connect;
     }
 
+
     public function selectJobs()
     {
-        $select = "SELECT `Name`, `Description` FROM `jobs` ORDER BY id DESC";
+        $select = "SELECT `id`, `name`, `description`, `date` FROM `jobs` ORDER BY id DESC";
         $selectQueryJobs = $this->dbQuery($select);
         return $selectQueryJobs;
 
     }
 
-    public function auht()
+
+    public function jobs()
     {
-        $select = "SELECT `user`, `pass` FROM `user`";
+        return $this->selectJobs();
+    }
+
+
+    public function authUser()
+    {
+        $select = "SELECT `user`, `pass` FROM `loginuser`";
         $authuser = $this->dbQuery($select);
         return $authuser;
     }
 
-    public function deletePost($delete)
+    public function auth()
+    {
+        return $this->authUser();
+    }
+
+
+    public function deleteComments($delete)
     {
         $this->delete = $delete;
         $select = 'DELETE FROM `reviews` WHERE id IN('. $this->delete . ')';
+        $delete = $this->dbExecute($select);
+        return $delete;
+    }
+
+
+    public function deleteJobs($delete)
+    {
+        $this->delete = $delete;
+        $select = 'DELETE FROM `jobs` WHERE id IN('. $this->delete . ')';
         $delete = $this->dbExecute($select);
         return $delete;
     }
