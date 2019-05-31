@@ -11,6 +11,7 @@ class Query
 {
     private $name;
     private $comment;
+    private $delete;
 
     public function __construct()
     {
@@ -59,6 +60,13 @@ class Query
         return $selectQuery;
     }
 
+    public function selectAllComments()
+    {
+        $select = "SELECT `id`, `name`, `comment`, `date` FROM `reviews` ORDER BY id DESC";
+        $selectQuery = $this->dbQuery($select);
+        return $selectQuery;
+    }
+
 
     public function selectComment()
     {
@@ -101,6 +109,21 @@ class Query
         $selectQueryJobs = $this->dbQuery($select);
         return $selectQueryJobs;
 
+    }
+
+    public function auht()
+    {
+        $select = "SELECT `user`, `pass` FROM `user`";
+        $authuser = $this->dbQuery($select);
+        return $authuser;
+    }
+
+    public function deletePost($delete)
+    {
+        $this->delete = $delete;
+        $select = 'DELETE FROM `reviews` WHERE id IN('. $this->delete . ')';
+        $delete = $this->dbExecute($select);
+        return $delete;
     }
 
 }

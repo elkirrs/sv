@@ -1,18 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/sv/views/assets/css/bootstrap.css">
-    <title>Document</title>
-</head>
+<?php
+require 'head.php';
+?>
 <body>
 <header>
-
-
     <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-5 mb-0 bg-white border-bottom shadow-lg">
         <h5 class="my-0 mr-md-auto font-weight-normal"><a href="/sv/index.php" class="text-decoration-none text-dark">Company name</a></h5>
         <nav class="my-2 my-md-0 mr-md-3">
