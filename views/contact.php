@@ -23,7 +23,7 @@ require_once "index/header.php";
                 <label for="exampleFormControlInput1">Элетронная почта:</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"  name="userEmail" required>
                 <label for="exampleFormControlInput1">Номер телефона:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="+792344567" name="userPhone" required>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="+79092344567" name="userPhone" required>
                 <label for="exampleFormControlTextarea1">Ваше сообщение:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение" name="userMessage" required></textarea>
                 <button type="submit" class="btn btn-success btn-lg my-3 rounded-pill" role="button" aria-expanded="false">Оставить заявку</button>

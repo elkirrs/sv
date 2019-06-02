@@ -15,10 +15,14 @@ if (isset($_POST['reviews']))
 
 if (isset($_POST['deleteComment']))
 {
-    if ($_POST['checkComments'])
+    if (isset($_POST['checkComments']))
     {
         $commentId = join(', ', $_POST['checkComments']);
         $query->deleteComments($commentId);
+        header('Location: ../admin/comments.php');
+    }
+    else
+    {
         header('Location: ../admin/comments.php');
     }
 }
@@ -42,7 +46,7 @@ if (isset($_POST['singin']))
         }
         else
         {
-            header('Location: /sv/admin/');
+            header('Location: /sv/admin');
         }
     }
 }
@@ -52,18 +56,29 @@ if (isset($_POST['addJobs']))
 {
     $nameJobs = htmlspecialchars(trim($_POST['nameJobs']));
     $description = htmlspecialchars(trim($_POST['description']));
+    $skills = htmlspecialchars(trim($_POST['skills']));
 
-    $query->insertJobs("$nameJobs", "$description");
-    header('Location: /sv/admin/Jobs.php');
+    $query->insertJobs("$nameJobs", "$description", "$skills");
+    header('Location: /sv/admin/jobs.php');
 }
 
 
 if (isset($_POST['deleteJobs']))
 {
-    if ($_POST['checkJobs'])
+    if (isset($_POST['checkJobs']))
     {
         $jobsId = join(', ', $_POST['checkJobs']);
         $query->deleteJobs($jobsId);
         header('Location: ../admin/jobs.php');
     }
+    else
+    {
+        header('Location: ../admin/jobs.php');
+    }
+}
+
+if  (isset($_GET['jobId']))
+{
+    $job = $_GET['jobId'];
+    header("Location: /sv/views/job.php?id=$job");
 }

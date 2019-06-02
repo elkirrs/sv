@@ -14,6 +14,9 @@ class Query
     private $delete;
     private $nameJobs;
     private $description;
+    private $jobId;
+    private $skills;
+
 
 
     public function __construct()
@@ -34,12 +37,13 @@ class Query
     }
 
 
-    public function insertJobs($nameJobs, $description)
+    public function insertJobs($nameJobs, $description, $skills)
     {
         $this->nameJobs = $nameJobs;
         $this->description = $description;
+        $this->skills = $skills;
 
-        $insert = "INSERT INTO `jobs` (`name`,`description`) VALUES ('$this->nameJobs','$this->description')";
+        $insert = "INSERT INTO `jobs` (`name`, `description`, `skills`) VALUES ('$this->nameJobs','$this->description', '$this->skills')";
         $queryInsert = $this->dbQuery($insert);
 
         return $queryInsert;
@@ -60,7 +64,7 @@ class Query
         {
             foreach ($count as $all)
             {
-                echo $all;
+                return $all;
             }
         }
     }
@@ -86,7 +90,7 @@ class Query
         {
             foreach ($jobs as $job)
             {
-                echo $job;
+                return $job;
             }
         }
     }
@@ -157,10 +161,24 @@ class Query
 
     public function selectJobs()
     {
-        $select = "SELECT `id`, `name`, `description`, `date` FROM `jobs` ORDER BY id DESC";
+        $select = "SELECT `id`, `name`, `description`, `skills`, `date` FROM `jobs` ORDER BY id DESC";
         $selectQueryJobs = $this->dbQuery($select);
         return $selectQueryJobs;
 
+    }
+
+
+    public function selectJob($jobId)
+    {
+        $this->jobId = $jobId;
+        $select = "SELECT `id`, `name`, `description`, `skills`, `date` FROM `jobs` WHERE id = '$this->jobId'";
+        $selectQueryJob = $this->dbQuery($select);
+
+        foreach ($selectQueryJob as $selectJobId)
+        {
+            return $selectJobId;
+        }
+//        return $selectQueryJob;
     }
 
 

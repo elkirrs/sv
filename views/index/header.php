@@ -4,7 +4,7 @@ require 'head.php';
 <body>
 <header>
     <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-5 mb-0 bg-white border-bottom shadow-lg">
-        <h5 class="my-0 mr-md-auto font-weight-normal"><a href="/sv/index.php" class="text-decoration-none text-dark">Company name</a></h5>
+        <h5 class="my-0 mr-md-auto font-weight-normal"><a href="/sv" class="text-decoration-none text-dark">Company name</a></h5>
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2 text-dark btn btn-outline-light btn-sm" href="/sv/views/contact.php">Contacts</a>
             <a class="p-2 text-dark btn btn-outline-light btn-sm" href="/sv/views/reviews.php">Info</a>

@@ -1,5 +1,7 @@
 <?php
-session_start();
+session_start([
+    'cookie_lifetime' => 86400
+]);
 require '../views/index/head.php';
 require_once '../controller/Query.php';
 ?>
@@ -24,6 +26,9 @@ require_once '../controller/Query.php';
         </li>
         <li class="nav-item">
             <a class="nav-link" href="jobs.php">Вакансии</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link float-right" href="/sv">Перейти на сайт</a>
         </li>
     </ul>
 

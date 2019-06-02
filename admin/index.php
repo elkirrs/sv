@@ -1,5 +1,7 @@
 <?php
-session_start();
+session_start([
+    'cookie_lifetime' => 86400
+]);
 require '../views/index/head.php';
 ?>
 <?php if (isset($_SESSION['userName'])) : ?>
